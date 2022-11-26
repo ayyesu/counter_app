@@ -13,10 +13,16 @@ const Counter = (props) => {
     console.log(count)
   }
 
+  const decrease = () => {
+    setCount(count - props.value)
+    console.log(count)
+  }
+
   return (
     <div>
       <h1>{count}</h1>
       <button onClick={increase} className="button">+ {props.value}</button>
+      <button onClick={decrease} className="btn">- {props.value}</button>
     </div>
   )
 }
